@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5976BF52-1491-47D9-800A-60DB2A888A38}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AlgoTradeReporter</RootNamespace>
+    <AssemblyName>AlgoTradeReporter</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveMQClient">
+      <HintPath>Reference\ActiveMQClient.dll</HintPath>
+    </Reference>
+    <Reference Include="AlgoTrading">
+      <HintPath>Reference\AlgoTrading.dll</HintPath>
+    </Reference>
+    <Reference Include="Apache.NMS">
+      <HintPath>Reference\Apache.NMS.dll</HintPath>
+    </Reference>
+    <Reference Include="Apache.NMS.ActiveMQ">
+      <HintPath>Reference\Apache.NMS.ActiveMQ.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandLine">
+      <HintPath>..\packages\CommandLineParser.1.9.71\lib\net45\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="CommTools">
+      <HintPath>Reference\CommTools.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\NPOI.2.1.3\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zlib">
+      <HintPath>Reference\Ionic.Zlib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Solver.Foundation" />
+    <Reference Include="NPOI">
+      <HintPath>..\packages\NPOI.2.1.3\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\packages\NPOI.2.1.3\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\packages\NPOI.2.1.3\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\packages\NPOI.2.1.3\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickFix">
+      <HintPath>Reference\QuickFix.dll</HintPath>
+    </Reference>
+    <Reference Include="QuotaComm">
+      <HintPath>Reference\QuotaComm.dll</HintPath>
+    </Reference>
+    <Reference Include="STSdb4">
+      <HintPath>Reference\STSdb4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebServiceHelper">
+      <HintPath>Reference\WebServiceHelper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\ConfigParser.cs" />
+    <Compile Include="Config\DBConfig.cs" />
+    <Compile Include="Config\EmailConfig.cs" />
+    <Compile Include="Config\FileConfig.cs" />
+    <Compile Include="Config\RunTimeConfig.cs" />
+    <Compile Include="Data\ClientInfo\Client.cs" />
+    <Compile Include="Data\ClientInfo\ReportFrequency.cs" />
+    <Compile Include="Data\Commons\DateProperty.cs" />
+    <Compile Include="Data\Trades\Order.cs" />
+    <Compile Include="Data\Trades\SavedClientOrder.cs" />
+    <Compile Include="Data\Trades\SavedExchangeOrder.cs" />
+    <Compile Include="Email\AbstractEmailSender.cs" />
+    <Compile Include="Email\ClientReportSender.cs" />
+    <Compile Include="Email\ExecReportSender.cs" />
+    <Compile Include="Email\ManagerReportSender.cs" />
+    <Compile Include="Email\ReportSenderMgr.cs" />
+    <Compile Include="FileUtil\ExcelHelper\AbstractTab.cs" />
+    <Compile Include="FileUtil\ExcelHelper\AggregatedStatistics.cs" />
+    <Compile Include="FileUtil\ExcelHelper\CellStyle.cs" />
+    <Compile Include="FileUtil\ExcelHelper\ClientTradeSummary.cs" />
+    <Compile Include="FileUtil\ExcelHelper\ClientExcel.cs" />
+    <Compile Include="FileUtil\ExcelHelper\ManagerExcel.cs" />
+    <Compile Include="FileUtil\ExcelHelper\ManagerTab.cs" />
+    <Compile Include="FileUtil\ExcelHelper\NumberFormat.cs" />
+    <Compile Include="FileUtil\ExcelHelper\TradeTab.cs" />
+    <Compile Include="FileUtil\ExcelHelper\StrategyStatistics.cs" />
+    <Compile Include="FileUtil\FileMgr.cs" />
+    <Compile Include="FileUtil\OrderParser.cs" />
+    <Compile Include="FileUtil\TradeLoader.cs" />
+    <Compile Include="Runner\Mode.cs" />
+    <Compile Include="Runner\Options.cs" />
+    <Compile Include="Runner\ParaValidator.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runner\ReportController.cs" />
+    <Compile Include="Runner\ReportRunner.cs" />
+    <Compile Include="Runner\RunnerParas.cs" />
+    <Compile Include="StoredProc\OrderStoredProc\AbstractOrderStoredProc.cs" />
+    <Compile Include="StoredProc\OrderStoredProc\StoredProcConditionOrder.cs" />
+    <Compile Include="StoredProc\QueryStoredProc\AbstractQueryStoredProc.cs" />
+    <Compile Include="StoredProc\QueryStoredProc\StoredProcGetNewClient.cs" />
+    <Compile Include="StoredProc\QueryStoredProc\StoredProcGetMultiplier.cs" />
+    <Compile Include="StoredProc\StoredProcMgr.cs" />
+    <Compile Include="StoredProc\OrderStoredProc\StoredProcExchangeOrder.cs" />
+    <Compile Include="StoredProc\QueryStoredProc\StoredProcGetClients.cs" />
+    <Compile Include="StoredProc\QueryStoredProc\StoredProcGetEngineList.cs" />
+    <Compile Include="StoredProc\QueryStoredProc\StoredProcGetTradingDay.cs" />
+    <Compile Include="StoredProc\OrderStoredProc\StoredProcClientOrder.cs" />
+    <Compile Include="Util\DateTimeUtil.cs" />
+    <Compile Include="Util\MathUtil.cs" />
+    <Compile Include="Data\Commons\UpdatedCount.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Runner\packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{B691E011-1797-432E-907A-4D8C69339129}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\configfile.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Reference\ActiveMQClient.dll" />
+    <Content Include="Reference\AlgoTrading.dll" />
+    <Content Include="Reference\Apache.NMS.ActiveMQ.dll" />
+    <Content Include="Reference\Apache.NMS.dll" />
+    <Content Include="Reference\Ionic.Zlib.dll" />
+    <Content Include="Reference\log4net.dll" />
+    <Content Include="Reference\Microsoft.Solver.Foundation.dll" />
+    <Content Include="Reference\QuickFix.dll" />
+    <Content Include="Reference\SMSHelper.dll" />
+    <Content Include="Reference\STSdb4.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
