@@ -42,7 +42,8 @@ namespace AlgoTradeReporter
             //string[] ARGS = { "-d", "20190326", "-a", "e:/account_test.csv" }; 
             //string[] ARGS = { "-d", "20191021"  };
             //string[] ARGS = { "-d", "20190208", "-a", "e:/account_test.csv" };
-            string[] ARGS = { "-d", "20190718:20191028", "-a", "e:/account_test.csv", "-m", "CLIENT_REPORT" };
+            //string[] ARGS = { "-d", "20190718:20191028", "-a", "E:/HCZQ/AlgoTradingReporter/AlgoTradeReporter/Config/Account.txt", "-m", "CLIENT_REPORT" };
+            string[] ARGS = {"-c", "E:/HCZQ/AlgoTradingReporter/AlgoTradeReporter/Config/configfile.xml", "-m", "SAVER" };
             args = ARGS;
             if (args.Contains("-h"))
             {
@@ -75,7 +76,7 @@ namespace AlgoTradeReporter
                     // Release DataBase connections.
                     logger.Info("Release DataBase Connection.");
                     StoredProcMgr.MANAGER.closeConn();
-                    Thread.Sleep(10000);
+                    Thread.Sleep(1*1000);
                 }
             }
         }

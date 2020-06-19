@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- TODO DTD validation -->
 <configuration>
-     <DBConfig>	   
+     <!--<DBConfig>	   
         <DBConnection name="AlgoTradeReport">
             <server>172.10.10.7</server>
             <database>AlgoTradeReport</database>
             <user>algodb</user>
             <password>!AlGoTeAm_</password>
         </DBConnection>
-    </DBConfig>
-   <!--QA<DBConfig>
+    </DBConfig>-->
+  <DBConfig>
     <DBConnection name="AlgoTradeReport">
       <server>219.143.244.232</server>
       <database>AlgoTradeReport</database>
       <user>algodb</user>
       <password>algodb</password>
     </DBConnection>
-  </DBConfig>-->
+  </DBConfig>
 
     <RuntimeConfig>
         <ReportZeroQtyOrder>false</ReportZeroQtyOrder>
-        <LocalFileDir>D:\logs\AlgoTradeReporter\</LocalFileDir>
+        <LocalFileDir>E:\logs\AlgoTradeReporter\</LocalFileDir>
         <KeepAttachment>true</KeepAttachment>
     </RuntimeConfig>
     
@@ -34,9 +34,9 @@
     <Sender>algo@hczq.com</Sender>
     <Password>63214677@HCZQ</Password>
     <SenderName>ALGO_REPORTOR_PROD</SenderName>
-    <Receiver>zhaoyu@hcyjs.com</Receiver>
-    <ManagerReportReceiver>zhaoyu@hcyjs.com</ManagerReportReceiver>
-    <CCList>no.1zhaoyu@126.com</CCList>
+    <Receiver>wangzhaoyun@hcyjs.com</Receiver>
+    <ManagerReportReceiver>wangzhaoyun@hcyjs.com</ManagerReportReceiver>
+    <CCList>wangzhaoyun@hcyjs.com</CCList>
     <SmtpServer>smtp.exmail.qq.com</SmtpServer>
     <Port>465</Port>
     <SslEnabled>true</SslEnabled>
