@@ -43,7 +43,8 @@ namespace AlgoTradeReporter
             //string[] ARGS = { "-d", "20191021"  };
             //string[] ARGS = { "-d", "20190208", "-a", "e:/account_test.csv" };
             //string[] ARGS = { "-d", "20190718:20191028", "-a", "E:/HCZQ/AlgoTradingReporter/AlgoTradeReporter/Config/Account.txt", "-m", "CLIENT_REPORT" };
-            string[] ARGS = {"-c", "E:/HCZQ/AlgoTradingReporter/AlgoTradeReporter/Config/configfile.xml", "-m", "SAVER" };
+            //string[] ARGS = {"-c", "E:/HCZQ/AlgoTradingReporter/AlgoTradeReporter/Config/configfile.xml", "-m", "REPORTER", "-a", "E:/HCZQ/AlgoTradingReporter/AlgoTradeReporter/Config/Account.txt", "-d", "20200619" };
+            string[] ARGS = { "-c", "E:/HCZQ/AlgoTradingReporter/AlgoTradeReporter/Config/configfile.xml", "-m", "SAVER", "-d", "20200629" };
             args = ARGS;
             if (args.Contains("-h"))
             {
