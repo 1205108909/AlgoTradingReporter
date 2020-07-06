@@ -5,3 +5,4 @@
 /.vs/ALgoTradeReporter/v15/Server/sqlite3
 /AlgoTradeReporter/bin
 /AlgoTradeReporter/obj
+/AlgoTradeReporter/Config/configfile.xml
